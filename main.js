@@ -311,6 +311,21 @@ const data = [
     }
 ];
 
+const edges = [];
+
+for (const subject in data) {
+    if (data[subject].length === 0) {
+        edges.push([subject, ""]);
+    } else {
+        for (const dependency of data[subject]) {
+            edges.push([subject, dependency]);
+        }
+    }
+}
+
+
+const graph = new Graph(edges);
+
 
 
 
