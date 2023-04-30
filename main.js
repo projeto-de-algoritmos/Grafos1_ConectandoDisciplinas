@@ -46,7 +46,34 @@ class Graph{
 }
 
 function findRelatedVertices(graph, vertex) {
-    // implementar logica para obter dependentes
+    const visited = {};
+    for (const key of graph.getVertices()) {
+        visited[key] = false;
+    }
+    const initialVertex = vertex;
+    const relations = [];
+    const directDependents = [];
+    const indirectDependents = [];
+
+    function recDfs(graph, vertex) {
+        visited[vertex] = true;
+
+        for (const neighbor of graph.neighbors[vertex]) {
+            if (!visited[neighbor]) {
+                if (vertex === initialVertex) {
+                    directDependents.push(neighbor);
+                } else {
+                    indirectDependents.push(neighbor);
+                }
+                relations.push([vertex, neighbor]);
+                recDfs(graph, neighbor);
+            }
+        }
+    }
+
+    recDfs(graph, vertex);
+
+    return [directDependents, indirectDependents, relations];
 }
 
 function findDependenciesInGraph(graph, vertex) {
