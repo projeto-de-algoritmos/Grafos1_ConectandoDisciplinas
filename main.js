@@ -326,7 +326,39 @@ for (const subject in data) {
 
 const graph = new Graph(edges);
 
+const express = require('express');
+const app = express();
+const path = require('path');
 
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+app.get('/', (req, res) => {
+    const vertices = graph.getVertices();
+    const index = vertices.indexOf('');
+    if (index !== -1) {
+        vertices.splice(index, 1);
+    }
+    res.render('index', { vertices });
+});
+
+app.post('/dependents', (req, res) => {
+    const target = req.body.target;
+    const dependents = findRelatedVertices(graph, target);
+    res.json({ target, direct: dependents[0], indirect: dependents[1] });
+});
+
+app.post('/dependencies', (req, res) => {
+    const target = req.body.target;
+    const dependencies = findDependenciesInGraph(graph, target);
+    res.json({ target, dependencies });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 
 
