@@ -1,3 +1,36 @@
+class Graph{
+
+    constructor(edges, directed = false) {
+        this.directed = directed;
+        this.neighbors = {};
+        this.addEdges(edges);
+    }
+
+    addEdges(edges) {
+       // implementar logica para adicionar arestas
+    }
+
+    getEdges() {
+        // implementar logica para obter arestas
+    }
+
+    getVertices() {
+        // implementar logica para obter vertices
+    }
+
+    edgeExists(edge) {
+       // implementar logica para verificar se aresta existe
+    }
+}
+
+function findRelatedVertices(graph, vertex) {
+    // implementar logica para obter dependentes
+}
+
+function findDependenciesInGraph(graph, vertex) {
+    // implementar logica para obter dependencias
+}
+
 const data = [
     {
         "materia": "Algoritmos e Programação de Computadores",
@@ -184,8 +217,6 @@ const data = [
         "tranca": []
     }
 ];
-
-
 
 
 
