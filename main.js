@@ -7,19 +7,41 @@ class Graph{
     }
 
     addEdges(edges) {
-       // implementar logica para adicionar arestas
+       for (const [x, y] of edges) {
+        if (!this.neighbors[x]) {
+            this.neighbors[x] = [];
+        }
+        this.neighbors[x].push(y);
+        if (!this.directed) {
+            if (!this.neighbors[y]) {
+                this.neighbors[y] = [];
+            }
+            this.neighbors[y].push(x);
+        } else {
+            if (!this.neighbors[y]) {
+                this.neighbors[y] = [];
+            }
+        }
+    }
     }
 
     getEdges() {
-        // implementar logica para obter arestas
+        const edges = [];
+        for (const key in this.neighbors) {
+            for (const value of this.neighbors[key]) {
+                edges.push([key, value]);
+            }
+        }
+        return edges;
     }
 
     getVertices() {
-        // implementar logica para obter vertices
+        return Object.keys(this.neighbors);
     }
 
     edgeExists(edge) {
-       // implementar logica para verificar se aresta existe
+       const [x, y] = edge;
+       return x in this.neighbors && this.neighbors[x].includes(y);
     }
 }
 
