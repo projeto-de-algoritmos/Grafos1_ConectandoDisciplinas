@@ -1,14 +1,14 @@
 const data = [
     {
-        "materia": "Algoritmos e Programação de Computadores",
-        "tranca": ["Desenvolvimento de Software", "Estruturas de Dados 1", "Orientação a Objetos"]
+        "materia": "APC",
+        "tranca": ["DS", "EDA 1", "OO"]
     },
     {
-        "materia": "Desenho Industrial Assistido por Computador",
-        "tranca": ["Interação Humano Computador"]
+        "materia": "DIAC",
+        "tranca": ["IHC"]
     },
     {
-        "materia": "Engenharia e Ambiente",
+        "materia": "EA",
         "tranca": []
     },
     {
@@ -16,12 +16,12 @@ const data = [
         "tranca": []
     },
     {
-        "materia": "Cálculo 1",
-        "tranca": ["Probabilidade e Estatística Aplicada à Engenharia", "Projeto e Análise de Algoritmos", "Cálculo 2"]
+        "materia": "C1",
+        "tranca": ["PE", "PA", "C2"]
     },
     {
-        "materia": "Cálculo 2",
-        "tranca": ["Métodos Numéricos para Engenharia"]
+        "materia": "C2",
+        "tranca": ["MNE"]
     },
     {
         "materia": "Física 1",
@@ -32,155 +32,155 @@ const data = [
         "tranca": []
     },
     {
-        "materia": "Introdução à Álgebra Linear",
-        "tranca": ["Teoria de Eletrônica Digital 1", "Prática de Eletrônica Digital 1"]
+        "materia": "IAL",
+        "tranca": ["TED 1", "PED 1"]
     },
     {
-        "materia": "Probabilidade e Estatística Aplicada à Engenharia",
+        "materia": "PE",
         "tranca": []
     },
     {
-        "materia": "Desenvolvimento de Software",
+        "materia": "DS",
         "tranca": []
     },
     {
-        "materia": "Métodos Numéricos para Engenharia",
+        "materia": "MNE",
         "tranca": []
     },
     {
-        "materia": "Engenharia Econômica",
-        "tranca": ["Gestão da Produção e Qualidade"]
+        "materia": "Econômica",
+        "tranca": ["GPQ"]
     },
     {
-        "materia": "Humanidades e Cidadania",
+        "materia": "HC",
         "tranca": []
     },
     {
-        "materia": "Teoria de Eletrônica Digital 1",
-        "tranca": ["Fundamentos de Arquiteturas de Computadores"]
+        "materia": "TED 1",
+        "tranca": ["FAC"]
     },
     {
-        "materia": "Prática de Eletrônica Digital 1",
-        "tranca": ["Fundamentos de Arquiteturas de Computadores"]
+        "materia": "PED 1",
+        "tranca": ["FAC"]
     },
     {
-        "materia": "Orientação a Objetos",
-        "tranca": ["Projeto Integrador de Engenharia 1", "Métodos de Desenvolvimento de Software", "Paradigmas de Programação"]
+        "materia": "OO",
+        "tranca": ["PI 1", "MDS", "Paradigmas"]
     },
     {
-        "materia": "Matemática Discreta 1",
-        "tranca": ["Matemática Discreta 2"]
+        "materia": "MD1",
+        "tranca": ["MD2"]
     },
     {
-        "materia": "Projeto Integrador de Engenharia 1",
-        "tranca": ["Projeto Integrador de Engenharia 2"]
+        "materia": "PI 1",
+        "tranca": ["PI 2"]
     },
     {
-        "materia": "Matemática Discreta 2",
-        "tranca": ["Sistemas de Banco de Dados 1"]
+        "materia": "MD2",
+        "tranca": ["SBGD 1"]
     },
     {
-        "materia": "Fundamentos de Arquiteturas de Computadores",
-        "tranca": ["Fundamentos de Sistemas Operacionais"]
+        "materia": "FAC",
+        "tranca": ["FSO"]
     },
     {
-        "materia": "Estruturas de Dados 1",
-        "tranca": ["Estruturas de Dados 2", "Projeto e Análise de Algoritmos", "Compiladores 1"]
+        "materia": "EDA 1",
+        "tranca": ["EDA 2", "PA", "Compiladores"]
     },
     {
-        "materia": "Métodos de Desenvolvimento de Software",
-        "tranca": ["Requisitos de Software", "Testes de Software"]
+        "materia": "MDS",
+        "tranca": ["Requisitos", "Testes"]
     },
     {
-        "materia": "Gestão da Produção e Qualidade",
-        "tranca": ["Qualidade de Software 1"]
+        "materia": "GPQ",
+        "tranca": ["Qualidade"]
     },
     {
-        "materia": "Interação Humano Computador",
-        "tranca": ["Qualidade de Software 1"]
+        "materia": "IHC",
+        "tranca": ["Qualidade"]
     },
     {
-        "materia": "Requisitos de Software",
-        "tranca": ["Arquitetura e Desenho de Software"]
+        "materia": "Requisitos",
+        "tranca": ["Arquitetura"]
     },
     {
-        "materia": "Sistemas de Banco de Dados 1",
-        "tranca": ["Sistemas de Banco de Dados 2"]
+        "materia": "SGBD 1",
+        "tranca": ["SGBD 2"]
     },
     {
-        "materia": "Fundamentos de Sistemas Operacionais",
-        "tranca": ["Fundamentos de Redes de Computadores", "Fundamentos de Sistemas Embarcados"]
+        "materia": "FSO",
+        "tranca": ["FRC", "Embarcados"]
     },
     {
-        "materia": "Compiladores 1",
-        "tranca": ["Paradigmas de Programação"]
+        "materia": "Compiladores",
+        "tranca": ["Paradigmas"]
     },
     {
-        "materia": "Estruturas de Dados 2",
-        "tranca": ["Programação para Sistemas Paralelos e Distribuídos"]
+        "materia": "EDA 2",
+        "tranca": ["PSPD"]
     },
     {
-        "materia": "Projeto e Análise de Algoritmos",
+        "materia": "PA",
         "tranca": []
     },
     {
-        "materia": "Sistemas de Banco de Dados 2",
+        "materia": "SGBD 2",
         "tranca": []
     },
     {
-        "materia": "Fundamentos de Redes de Computadores",
-        "tranca": ["Programação para Sistemas Paralelos e Distribuídos"]
+        "materia": "FRC",
+        "tranca": ["PSPD"]
     },
     {
-        "materia": "Arquitetura e Desenho de Software",
-        "tranca": ["Paradigmas de Programação", "Técnicas de Programação em Plataformas Emergentes"]
+        "materia": "Arquitetura",
+        "tranca": ["Paradigmas", "TPPE"]
     },
     {
-        "materia": "Testes de Software",
-        "tranca": ["Gerência de Configuração e Evolução de Software", "Técnicas de Programação em Plataformas Emergentes"]
+        "materia": "Testes",
+        "tranca": ["GCES", "TPPE"]
     },
     {
-        "materia": "Qualidade de Software 1",
+        "materia": "Qualidade",
         "tranca": []
     },
     {
-        "materia": "Técnicas de Programação em Plataformas Emergentes",
-        "tranca": ["Engenharia de Produto de Software"]
+        "materia": "TPPE",
+        "tranca": ["EPS"]
     },
     {
-        "materia": "Paradigmas de Programação",
+        "materia": "Paradigmas",
         "tranca": []
     },
     {
-        "materia": "Fundamentos de Sistemas Embarcados",
+        "materia": "Embarcados",
         "tranca": []
     },
     {
-        "materia": "Programação para Sistemas Paralelos e Distribuídos",
+        "materia": "PSPD",
         "tranca": []
     },
     {
-        "materia": "Engenharia de Produto de Software",
-        "tranca": ["Projeto Integrador de Engenharia 2"]
+        "materia": "EPS",
+        "tranca": ["PI 2"]
     },
     {
-        "materia": "Gerência de Configuração e Evolução de Software",
+        "materia": "GCES",
         "tranca": []
     },
     {
-        "materia": "Estágio Supervisionado",
+        "materia": "Estágio",
         "tranca": []
     },
     {
-        "materia": "Trabalho de Conclusão de Curso 1",
-        "tranca": ["Trabalho de Conclusão de Curso 2"]
+        "materia": "TCC 1",
+        "tranca": ["TCC 2"]
     },
     {
-        "materia": "Projeto Integradorde Engenharia 2",
+        "materia": "PI 2",
         "tranca": []
     },
     {
-        "materia": "Trabalho de Conclusão de Curso 2",
+        "materia": "TCC 2",
         "tranca": []
     }
 ];
