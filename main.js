@@ -57,7 +57,6 @@ function findRelatedVertices(graph, vertex) {
 
     function recDfs(graph, vertex) {
         visited[vertex] = true;
-
         for (const neighbor of graph.neighbors[vertex]) {
             if (!visited[neighbor]) {
                 if (vertex === initialVertex) {
@@ -314,19 +313,18 @@ const data = [
 const edges = [];
 
 for (const subject in data) {
-    if (data[subject].length === 0) {
-        edges.push([subject, ""]);
+    
+    if (data[subject].tranca.length === 0) {
+        edges.push([data[subject].materia, ""]);
     } else {
-        for (const dependency of data[subject]) {
-            edges.push([subject, dependency]);
+        for (const dependency of data[subject].tranca) {
+            edges.push([data[subject].materia, dependency]);
         }
     }
 }
 
 
-const graph = new Graph(edges);
-
-
+const graph = new Graph(edges, directed = true);
 
 
 
