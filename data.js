@@ -1,187 +1,233 @@
 const data = [
     {
         "materia": "APC",
-        "tranca": ["DS", "EDA 1", "OO"]
+        "tranca": ["DS", "EDA 1", "OO"],
+        "color": "#FFC107"
     },
     {
         "materia": "DIAC",
-        "tranca": ["IHC"]
+        "tranca": ["IHC"],
+        "color": "#FFC107"
     },
     {
         "materia": "EA",
-        "tranca": []
+        "tranca": [],
+        "color": "#FFC107"
     },
     {
-        "materia": "Introdução à Engenharia",
-        "tranca": []
+        "materia": "Introdução",
+        "tranca": [],
+        "color": "#FFC107"
     },
     {
         "materia": "C1",
-        "tranca": ["PE", "PA", "C2"]
+        "tranca": ["PE", "PA", "C2"],
+        "color": "#FFC107"
     },
     {
         "materia": "C2",
-        "tranca": ["MNE"]
+        "tranca": ["MNE"],
+        "color": "#FFC107"
     },
     {
-        "materia": "Física 1",
-        "tranca": []
+        "materia": "Fis 1",
+        "tranca": [],
+        "color": "#FFC107"
     },
     {
-        "materia": "Física 1 Experimental",
-        "tranca": []
+        "materia": "Fis 1 Exp",
+        "tranca": [],
+        "color": "#FFC107"
     },
     {
         "materia": "IAL",
-        "tranca": ["TED 1", "PED 1"]
+        "tranca": ["TED 1", "PED 1"],
+        "color": "#FFC107"
     },
     {
         "materia": "PE",
-        "tranca": []
+        "tranca": [],
+        "color": "#FFC107"
     },
     {
         "materia": "DS",
-        "tranca": []
+        "tranca": [],
+        "color": "#FF85C1"
     },
     {
         "materia": "MNE",
-        "tranca": []
+        "tranca": [],
+        "color": "#FFC107"
     },
     {
         "materia": "Econômica",
-        "tranca": ["GPQ"]
+        "tranca": ["GPQ"],
+        "color": "#FFC107"
     },
     {
         "materia": "HC",
-        "tranca": []
+        "tranca": [],
+        "color": "#FFC107"
     },
     {
         "materia": "TED 1",
-        "tranca": ["FAC"]
+        "tranca": ["FAC"],
+        "color": "#FFC107"
     },
     {
         "materia": "PED 1",
-        "tranca": ["FAC"]
+        "tranca": ["FAC"],
+        "color": "#FFC107"
     },
     {
         "materia": "OO",
-        "tranca": ["PI 1", "MDS", "Paradigmas"]
+        "tranca": ["PI 1", "MDS", "Paradigmas"],
+        "color": "#9ACD32"
     },
     {
         "materia": "MD1",
-        "tranca": ["MD2"]
+        "tranca": ["MD2"],
+        "color": "#9ACD32"
     },
     {
         "materia": "PI 1",
-        "tranca": ["PI 2"]
+        "tranca": ["PI 2"],
+        "color": "#FF8C00"
     },
     {
         "materia": "MD2",
-        "tranca": ["SBGD 1"]
+        "tranca": ["SBGD 1"],
+        "color": "#9ACD32"
     },
     {
         "materia": "FAC",
-        "tranca": ["FSO"]
+        "tranca": ["FSO"],
+        "color": "#9ACD32"
     },
     {
         "materia": "EDA 1",
-        "tranca": ["EDA 2", "PA", "Compiladores"]
+        "tranca": ["EDA 2", "PA", "Compiladores"],
+        "color": "#9ACD32"
     },
     {
         "materia": "MDS",
-        "tranca": ["Requisitos", "Testes"]
+        "tranca": ["Requisitos", "Testes"],
+        "color": "#9ACD32"
     },
     {
         "materia": "GPQ",
-        "tranca": ["Qualidade"]
+        "tranca": ["Qualidade"],
+        "color": "#FFC107"
     },
     {
         "materia": "IHC",
-        "tranca": ["Qualidade"]
+        "tranca": ["Qualidade"],
+        "color": "#9ACD32"
     },
     {
         "materia": "Requisitos",
-        "tranca": ["Arquitetura"]
+        "tranca": ["Arquitetura"],
+        "color": "#9ACD32"
     },
     {
         "materia": "SGBD 1",
-        "tranca": ["SGBD 2"]
+        "tranca": ["SGBD 2"],
+        "color": "#9ACD32"
     },
     {
         "materia": "FSO",
-        "tranca": ["FRC", "Embarcados"]
+        "tranca": ["FRC", "Embarcados"],
+        "color": "#9ACD32"
     },
     {
         "materia": "Compiladores",
-        "tranca": ["Paradigmas"]
+        "tranca": ["Paradigmas"],
+        "color": "#9ACD32"
     },
     {
         "materia": "EDA 2",
-        "tranca": ["PSPD"]
+        "tranca": ["PSPD"],
+        "color": "#9ACD32"
     },
     {
         "materia": "PA",
-        "tranca": []
+        "tranca": [],
+        "color": "#9ACD32"
     },
     {
         "materia": "SGBD 2",
-        "tranca": []
+        "tranca": [],
+        "color": "#9ACD32"
     },
     {
         "materia": "FRC",
-        "tranca": ["PSPD"]
+        "tranca": ["PSPD"],
+        "color": "#9ACD32"
     },
     {
         "materia": "Arquitetura",
-        "tranca": ["Paradigmas", "TPPE"]
+        "tranca": ["Paradigmas", "TPPE"],
+        "color": "#9ACD32"
     },
     {
         "materia": "Testes",
-        "tranca": ["GCES", "TPPE"]
+        "tranca": ["GCES", "TPPE"],
+        "color": "#9ACD32"
     },
     {
         "materia": "Qualidade",
-        "tranca": []
+        "tranca": [],
+        "color": "#9ACD32"
     },
     {
         "materia": "TPPE",
-        "tranca": ["EPS"]
+        "tranca": ["EPS"],
+        "color": "#9ACD32"
     },
     {
         "materia": "Paradigmas",
-        "tranca": []
+        "tranca": [],
+        "color": "#9ACD32"
     },
     {
         "materia": "Embarcados",
-        "tranca": []
+        "tranca": [],
+        "color": "#9ACD32"
     },
     {
         "materia": "PSPD",
-        "tranca": []
+        "tranca": [],
+        "color": "#9ACD32"
     },
     {
         "materia": "EPS",
-        "tranca": ["PI 2"]
+        "tranca": ["PI 2"],
+        "color": "#9ACD32"
     },
     {
         "materia": "GCES",
-        "tranca": []
+        "tranca": [],
+        "color": "#9ACD32"
     },
     {
         "materia": "Estágio",
-        "tranca": []
+        "tranca": [],
+        "color": "#FF8C00"
     },
     {
         "materia": "TCC 1",
-        "tranca": ["TCC 2"]
+        "tranca": ["TCC 2"],
+        "color": "#FF8C00"
     },
     {
         "materia": "PI 2",
-        "tranca": []
+        "tranca": [],
+        "color": "#9ACD32"
     },
     {
         "materia": "TCC 2",
-        "tranca": []
+        "tranca": [],
+        "color": "#FF8C00"
     }
 ];
 

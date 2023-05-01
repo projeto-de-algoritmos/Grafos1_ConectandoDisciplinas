@@ -9,7 +9,12 @@ body {
 h1,
 h2 {
     margin: 1rem;
-    font-size: 24px;
+    font-size: 18px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+h1:hover {
+    font-size: 28px; /* Adicione esta linha */
 }
 
 select,
@@ -101,7 +106,8 @@ ul li {
 .box span {
     text-align: left;
     font-weight: bold;
-    font-size: 8px; /* Decreased font size */
+    font-size: 12px; /* Decreased font size */
+    color: #000000;
     line-height: 18px; /* Adjusted line height */
     padding: 10px;
     word-wrap: break-word; /* Added word-wrap property */
