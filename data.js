@@ -111,7 +111,7 @@ const data = [
     },
     {
         "materia": "MDS",
-        "tranca": ["Requisitos", "Testes"],
+        "tranca": ["Requisitos", "Testes","IHC"],
         "color": "#9ACD32"
     },
     {
