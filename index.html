@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectando Disciplinas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="unb.png" sizes="16x16" type="image/png"> <!-- Add this line -->
+    <link rel="icon" href="unb.png" sizes="48x48" type="image/png"> <!-- Modify this line -->
+    <script src="graph.js"> </script>
+    <script src="data.js"> </script>
+  
+</head>
+<body>
+    <nav class="navbar">
+        <img src="Unb.png" height="40" alt="Logo">
+        <div class="right-group">
+            <select id="vertex-select">
+                <option value="" disabled selected>Selecione uma matéria</option>
+            </select>
+            <button onclick="submitForm()">Enviar <b> > </b> </button>
+        </div>
+    </nav>
+    
+   
+    <script src="square.js"></script>
+    <h1>Dependente diretamente</h1>
+    <div id="direct-dependents" class="container"></div>
+    <h1>Depende indiretamente</h1>
+    <div id="indirect-dependents" class="container"></div>
+    <h1>Pré-Requisitos</h1>
+    <div id="dependencies" class="container"></div>
+</body>
+
+</html>

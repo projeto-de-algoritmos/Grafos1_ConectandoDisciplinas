@@ -1,0 +1,142 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    margin: 1rem;
+    font-size: 18px;
+    transition: font-size 0.3s ease-in-out;
+}
+
+h1:hover {
+    font-size: 28px; /* Adicione esta linha */
+}
+
+select,
+button {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 1rem;
+    height: 2.5rem;
+    border-radius: 5px; 
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #b20710;
+    border: 1px solid #fff;
+}
+
+select {
+    background-color: #222222; /* Updated background color */
+    border: 1px solid #757575; /* Updated border color */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 1rem;
+    height: 2.5rem;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+ul li {
+    margin: 0.3rem;
+}
+
+.navbar {
+    background-color: #141414;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+
+.right-group {
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    height: 60px;
+    object-fit: contain;
+}
+.logo-enlarged {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
+.container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Add this to hide scrollbar in Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* Add this to hide scrollbar in WebKit-based browsers */
+}
+
+
+.box {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    padding: 0;
+    margin: 5px;
+    width: 125px;
+    height: 100px;
+    min-width: 125px; /* Add this */
+    min-height: 100 px; /* Add this */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box span {
+    text-align: left;
+    font-weight: bold;
+    font-size: 12px; /* Decreased font size */
+    color: #000000;
+    line-height: 18px; /* Adjusted line height */
+    padding: 10px;
+    word-wrap: break-word; /* Added word-wrap property */
+    overflow-wrap: break-word; /* Added overflow-wrap property */
+    hyphens: auto; /* Added hyphens property */
+    max-width: 90%; /* Added max-width property */
+}
+
+.hidden {
+    display: none;
+}
+
+.expanded {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar img:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
