@@ -28,7 +28,8 @@ button {
     cursor: pointer;
     margin: 1rem;
     height: 2.5rem;
-    border-radius: 5px; /* Add this */
+    border-radius: 5px; 
+    font-weight: bold;
 }
 
 button:hover {
@@ -37,8 +38,16 @@ button:hover {
 }
 
 select {
-    background-color: #000;
-    border: 1px solid #fff;
+    background-color: #222222; /* Updated background color */
+    border: 1px solid #757575; /* Updated border color */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 1rem;
+    height: 2.5rem;
+    border-radius: 5px;
 }
 
 ul {
@@ -51,24 +60,26 @@ ul li {
 }
 
 .navbar {
-    background-color: #000;
+    background-color: #141414;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 0.5rem 2rem;
 }
 
-.navbar a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 1rem;
+.right-group {
+    display: flex;
+    align-items: center;
 }
 
-.navbar a:hover {
-    color: #e50914;
+.navbar img {
+    height: 60px;
+    object-fit: contain;
 }
-
+.logo-enlarged {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
 .container {
     display: flex;
     overflow-x: auto;
@@ -118,4 +129,14 @@ ul li {
 
 .hidden {
     display: none;
+}
+
+.expanded {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar img:hover {
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
 }

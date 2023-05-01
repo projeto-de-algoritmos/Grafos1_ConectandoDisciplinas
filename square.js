@@ -21,7 +21,9 @@ function populateSelect() {
         vertexSelect.appendChild(option);
     });
 }
-
+function toggleLogoSize(logo) {
+    logo.classList.toggle('logo-enlarged');
+}
 function submitForm() {
     const vertex = vertexSelect.value;
     const dependents = findRelatedVertices(graph, vertex);
