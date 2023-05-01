@@ -61,9 +61,9 @@ function findRelatedVertices(graph, vertex) {
 
         for (const neighbor of graph.neighbors[vertex]) {
             if (!visited[neighbor]) {
-                if (vertex === initialVertex) {
+                if (vertex === initialVertex && neighbor !== "") {
                     directDependents.push(neighbor);
-                } else {
+                } else if (neighbor !=""){
                     indirectDependents.push(neighbor);
                 }
                 relations.push([vertex, neighbor]);
