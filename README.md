@@ -13,18 +13,21 @@
 O projeto proposto tem como objetivo identificar os pré-requisitos necessários para cursar uma determinada matéria em um fluxo acadêmico, bem como as matérias que dependem dela.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![](./screenshots/screenshot1.jpg)
+![](./screenshots/screenshot2.jpg)
+![](screenshots/screenshot3.jpg)
+
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: JS<br>
+**Framework**: XXXXX<br>
+
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Deploy do projeto foi feito usando o github pages.Para acessa-lo clique no link abaixo:<br>
+https://projeto-de-algoritmos.github.io/Grafos1_ConectandoDisciplinas/
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+
 
 
 
