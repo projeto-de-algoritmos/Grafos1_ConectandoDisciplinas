@@ -233,15 +233,16 @@ const data = [
 
 const edges = [];
 
-for (const subject of data) {
-    if (subject.tranca.length === 0) {
-        edges.push([subject.materia, ""]);
+for (const subject in data) {
+
+    if (data[subject].tranca.length === 0) {
+        edges.push([data[subject].materia, ""]);
     } else {
-        for (const dependency of subject.tranca) {
-            edges.push([subject.materia, dependency]);
+        for (const dependency of data[subject].tranca) {
+            edges.push([data[subject].materia, dependency]);
         }
     }
 }
 
 
-const graph = new Graph(edges);
+const graph = new Graph(edges, directed = true);
