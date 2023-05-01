@@ -17,13 +17,13 @@
             margin: 0;
             padding: 0;
         }
-    
+
         h1,
         h2 {
             margin: 1rem;
             font-size: 24px;
         }
-    
+
         select,
         button {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -38,26 +38,26 @@
             height: 2.5rem;
             height: 2.5rem;
         }
-    
+
         button:hover {
             background-color: #b20710;
             border: 1px solid #fff;
         }
-    
+
         select {
             background-color: #000;
             border: 1px solid #fff;
         }
-    
+
         ul {
             list-style-type: none;
             padding-left: 1rem;
         }
-    
+
         ul li {
             margin: 0.3rem;
         }
-    
+
         .navbar {
             background-color: #000;
             display: flex;
@@ -66,23 +66,23 @@
             padding: 0.5rem 1rem;
             font-size: 1rem;
         }
-    
+
         .navbar a {
             color: #ffffff;
             text-decoration: none;
             margin-right: 1rem;
         }
-    
+
         .navbar a:hover {
             color: #e50914;
         }
-    
+
         .container {
             display: flex;
             flex-wrap: wrap;
             margin-top: 10px;
         }
-    
+
         .box {
             background-color: rgba(0, 0, 0, 0.1);
             border: 1px solid #d4d4d4;
@@ -97,11 +97,11 @@
             align-items: center;
             transition: transform 0.2s ease-in-out;
         }
-    
+
         .box:hover {
             transform: scale(1.1);
         }
-    
+
         .box span {
             text-align: center;
             font-weight: bold;
@@ -110,7 +110,7 @@
             padding: 10px;
         }
     </style>
-    
+
     <script>
         // Cole aqui o código da classe Graph e as funções findRelatedVertices e findDependenciesInGraph
         class Graph {
@@ -445,23 +445,41 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#">Categorias</a>
-        <a href="#">Favoritos</a>
-        <a href="#">Perfil</a>
-    </div>
+   
     <h1>Selecione uma matéria</h1>
-    <select id="vertex-select">
-    </select>
+    <select id="vertex-select"></select>
     <button onclick="submitForm()">Enviar <b> > </b> </button>
 
-    <h2>Dependentes Diretos</h2>
-    <div id="direct-dependents" class="container"></div>
-    <h2>Dependentes Indiretos</h2>
-    <div id="indirect-dependents" class="container"></div>
-    <h2>Dependências</h2>
-    <div id="dependencies" class="container"></div>
+    
+    <div id="dependencies-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#dependencies-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#dependencies-carousel" data-slide-to="1"></li>
+            <li data-target="#dependencies-carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <h3>Dependentes Diretos</h3>
+                <div id="direct-dependents" class="container"></div>
+            </div>
+            <div class="carousel-item">
+                <h3>Dependentes Indiretos</h3>
+                <div id="indirect-dependents" class="container"></div>
+            </div>
+            <div class="carousel-item">
+                <h3>Dependências</h3>
+                <div id="dependencies" class="container"></div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#dependencies-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#dependencies-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
 
     <script>
         const vertexSelect = document.getElementById('vertex-select');
@@ -469,44 +487,37 @@
         const indirectDependents = document.getElementById('indirect-dependents');
         const dependenciesList = document.getElementById('dependencies');
 
-        function displayDependencies(directDependencies, indirectDependencies, dependents) {
-            const directDependenciesContainer = document.getElementById("directDependencies");
-            const indirectDependenciesContainer = document.getElementById("indirectDependencies");
-            const dependentsContainer = document.getElementById("dependents");
-        
-            directDependenciesContainer.innerHTML = "";
-            indirectDependenciesContainer.innerHTML = "";
-            dependentsContainer.innerHTML = "";
-        
-            for (const subject of directDependencies) {
-                const box = document.createElement("div");
-                box.className = "box";
-                const text = document.createElement("span");
+        function populateCarousel(directDependencies, indirectDependencies, dependencies) {
+            // Dependentes diretos
+            const directDependenciesContainer = document.getElementById('direct-dependents');
+            directDependenciesContainer.innerHTML = '';
+            directDependencies.forEach((subject) => {
+                const box = document.createElement('div');
+                box.className = 'box';
+                const text = document.createElement('span');
                 text.textContent = subject;
                 box.appendChild(text);
                 directDependenciesContainer.appendChild(box);
-            }
-        
-            for (const subject of indirectDependencies) {
-                const box = document.createElement("div");
-                box.className = "box";
-                const text = document.createElement("span");
-                text.textContent = subject;
-                box.appendChild(text);
-                indirectDependenciesContainer.appendChild(box);
-            }
-        
-            for (const subject of dependents) {
-                const box = document.createElement("div");
-                box.className = "box";
-                const text = document.createElement("span");
-                text.textContent = subject;
-                box.appendChild(text);
-                dependentsContainer.appendChild(box);
-            }
-        }
-        
+            });
 
+            // Dependências
+            const dependenciesContainer = document.getElementById('dependencies');
+            dependenciesContainer.innerHTML = '';
+            dependencies.forEach((dependency) => {
+                const box = document.createElement('div');
+                box.className = 'box';
+                const text = document.createElement('span');
+                text.textContent = dependency;
+                box.appendChild(text);
+                dependenciesContainer.appendChild(box);
+            });
+
+
+            // Ativa o primeiro item do carousel
+            const carousel = document.querySelector('#dependencies-carousel');
+            const carouselItems = carousel.querySelectorAll('.carousel-item');
+            carouselItems[0].classList.add('active');
+        }
         function populateSelect() {
             const vertices = graph.getVertices();
             const index = vertices.indexOf('');
@@ -524,37 +535,32 @@
         function submitForm() {
             const vertex = vertexSelect.value;
 
-           // Dependentes diretos e indiretos
-  const dependents = findRelatedVertices(graph, vertex);
-  directDependents.innerHTML = '';
-  dependents[0].forEach((dependent) => {
-    const div = document.createElement('div');
-    div.classList.add('box');
-    div.textContent = dependent;
-    directDependents.appendChild(div);
-  });
+            // Dependentes diretos e indiretos
+            const dependents = findRelatedVertices(graph, vertex);
+            const directDependencies = dependents[0];
+            const indirectDependencies = dependents[1];
 
-  indirectDependents.innerHTML = '';
-  dependents[1].forEach((dependent) => {
-    const div = document.createElement('div');
-    div.classList.add('box');
-    div.textContent = dependent;
-    indirectDependents.appendChild(div);
-  });
+            // Dependências
+            const dependencies = findDependenciesInGraph(graph, vertex);
 
-  // Dependências
-  const dependencies = findDependenciesInGraph(graph, vertex);
-  dependenciesList.innerHTML = '';
-  dependencies.forEach((dependency) => {
-    const div = document.createElement('div');
-    div.classList.add('box');
-    div.textContent = dependency;
-    dependenciesList.appendChild(div);
-  });
+            populateCarousel(directDependencies, indirectDependencies, dependencies);
         }
 
         populateSelect();
+        // Dependentes indiretos
+        const indirectDependenciesContainer = document.getElementById('indirect-dependents');
+        indirectDependenciesContainer.innerHTML = '';
+        indirectDependencies.forEach((subject) => {
+            const box = document.createElement('div');
+            box.className = 'box';
+            const text = document.createElement('span');
+            text.textContent = subject;
+            box.appendChild(text);
+            indirectDependenciesContainer.appendChild(box);
+        });
+
     </script>
+
 </body>
 
 </html>
