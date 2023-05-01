@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="graph.js"> </script>
+    <script src="data.js"> </script>
+</head>
+<body>
+    
+    <select id="vertex-select">
+        <option value="" disabled selected>Selecione uma matéria</option>
+    </select>
+    <button onclick="submitForm()"><b>Enviar</b> </button>
+    <script src="square.js">
+       
+    </script>
+    <h1><b>Dependentes diretos</b></h1>
+    
+    <div id="direct-dependents" class="container"></div>
+    <button class="hidden" onclick="scrollContent('direct-dependents', -100)"><</button>
+    <button class="hidden" onclick="scrollContent('direct-dependents', 100)">></button>
+    <h1><b>Dependentes indiretos </b></h1>
+    
+    <div id="indirect-dependents" class="container"></div>
+    <button class="hidden" onclick="scrollContent('indirect-dependents', -100)"><</button>
+    <button class="hidden" onclick="scrollContent('indirect-dependents', 100)">></button>
+
+    <h1><b> Dependências </b></h1>
+    
+
+    <div id="dependencies" class="container"></div>
+    <button class="hidden" onclick="scrollContent('dependencies', -100)"><</button>
+    <button  class="hidden"onclick="scrollContent('dependencies', 100)">></button>
+    <div style="margin-top: 10px;">
+   
+   
+    </div>
+    <div style="margin-top: 10px;">
+   
+   
+    </div>
+    <div style="margin-top: 10px;">
+   
+   
+    </div>
+    <script>
+    function scrollContent(elementId, scrollAmount) {
+    const container = document.getElementById(elementId);
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+    </script>
+    
+    </body>
+    </html>
+    

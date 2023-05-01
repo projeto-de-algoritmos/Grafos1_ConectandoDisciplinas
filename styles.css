@@ -23,8 +23,7 @@ button {
     cursor: pointer;
     margin: 1rem;
     height: 2.5rem;
-    height: 2.5rem;
-    height: 2.5rem;
+    border-radius: 5px; /* Add this */
 }
 
 button:hover {
@@ -67,9 +66,15 @@ ul li {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Add this to hide scrollbar in Firefox */
 }
+
+.container::-webkit-scrollbar {
+    display: none; /* Add this to hide scrollbar in WebKit-based browsers */
+}
+
 
 .box {
     background-color: rgba(0, 0, 0, 0.1);
@@ -77,13 +82,16 @@ ul li {
     border-radius: 5px;
     padding: 0;
     margin: 5px;
-    width: 200px;
-    height: 160px;
+    width: 125px;
+    height: 100px;
+    min-width: 125px; /* Add this */
+    min-height: 100 px; /* Add this */
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.2s ease-in-out;
+    overflow: hidden;
 }
 
 .box:hover {
@@ -91,12 +99,17 @@ ul li {
 }
 
 .box span {
-    text-align: center;
+    text-align: left;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 8px; /* Decreased font size */
+    line-height: 18px; /* Adjusted line height */
     padding: 10px;
+    word-wrap: break-word; /* Added word-wrap property */
+    overflow-wrap: break-word; /* Added overflow-wrap property */
+    hyphens: auto; /* Added hyphens property */
+    max-width: 90%; /* Added max-width property */
 }
 
-
-
+.hidden {
+    display: none;
+}
