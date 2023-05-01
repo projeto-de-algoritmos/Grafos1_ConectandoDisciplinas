@@ -96,7 +96,7 @@ const data = [
     },
     {
         "materia": "MD2",
-        "tranca": ["SBGD 1"],
+        "tranca": ["SGBD 1"],
         "color": "#9ACD32"
     },
     {
